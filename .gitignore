@@ -1,0 +1,29 @@
+.upstream/
+
+# Generated deployment files
+.env
+.credentials
+docker-compose.yml
+docker-compose.caddy.yml
+Caddyfile
+sub2apictl
+sub2apictl.ps1
+
+# Runtime data
+data/
+postgres_data/
+redis_data/
+caddy_data/
+caddy_config/
+
+# Backups and logs
+*.backup.*
+sub2api-backup-*.tar.gz
+sub2api-backup-*.zip
+*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
