@@ -122,12 +122,12 @@ function Set-DotEnvValue([string]$Path, [string]$Key, [string]$Value) {
 
 function Test-DockerReady {
     if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
-        throw "Docker was not found. Install Docker Desktop, start it, then rerun this script."
+        throw "Docker was not found. On Windows/macOS, install and start Docker Desktop first: https://www.docker.com/products/docker-desktop/ . Then rerun this script."
     }
 
     & docker info *> $null
     if ($LASTEXITCODE -ne 0) {
-        throw "Docker is installed but not running. Start Docker Desktop, then rerun this script."
+        throw "Docker is installed but not running. Start Docker Desktop and wait until it says Docker is running, then rerun this script."
     }
 
     & docker compose version *> $null

@@ -49,6 +49,8 @@ Install and start Docker Desktop first:
 
 [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
+Important: on Windows, Docker Desktop must already be installed and running. After that, the command below deploys Sub2API in one step. A completely fresh Windows machine may still need the Docker Desktop installer, first launch, WSL2 setup, or a reboot.
+
 Then run PowerShell:
 
 ```powershell
@@ -92,6 +94,7 @@ Local computer:
 - macOS / Windows needs Docker Desktop. Install it once, open it, then run the one-command installer.
 - Docker Desktop download: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - The script does not install Docker Desktop on macOS / Windows because Docker Desktop is a GUI app.
+- Windows one-command deployment means: after Docker Desktop is installed and running, one PowerShell command deploys Sub2API.
 
 Ubuntu server:
 
@@ -235,6 +238,8 @@ curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.
 
 [下载 Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
+注意：Windows 必须先安装并运行 Docker Desktop。完成这一步后，下面这条命令才是“一条命令部署 Sub2API”。如果是一台全新的 Windows 电脑，可能还需要先安装 Docker Desktop、首次启动、配置 WSL2，或者重启一次。
+
 然后运行 PowerShell：
 
 ```powershell
@@ -278,6 +283,7 @@ Admin password: 自动生成的密码
 - macOS / Windows 需要 Docker Desktop。只需要安装一次，打开它，然后运行一键部署命令。
 - Docker Desktop 下载地址：[https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - 脚本不会自动安装 macOS / Windows 的 Docker Desktop，因为它是图形界面软件。
+- Windows 的“一键部署”意思是：Docker Desktop 已经安装并正在运行后，一条 PowerShell 命令完成 Sub2API 部署。
 
 Ubuntu 服务器：
 
