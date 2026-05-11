@@ -23,9 +23,21 @@ It generates configuration, secrets, persistent data folders, starts Docker cont
 
 ### Quick Start
 
-#### macOS / Linux Local
+#### macOS Local
 
-Install and start Docker Desktop first, then run:
+For macOS, install and start Docker Desktop first:
+
+[Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+Then run:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | bash -s -- --local
+```
+
+#### Linux Local
+
+Install and start Docker first, then run:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | bash -s -- --local
@@ -33,7 +45,11 @@ curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.
 
 #### Windows Local
 
-Install and start Docker Desktop first, then run PowerShell:
+Install and start Docker Desktop first:
+
+[Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+Then run PowerShell:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.ps1 -OutFile install.ps1; .\install.ps1"
@@ -74,6 +90,7 @@ Admin password: generated-password
 Local computer:
 
 - macOS / Windows needs Docker Desktop. Install it once, open it, then run the one-command installer.
+- Docker Desktop download: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - The script does not install Docker Desktop on macOS / Windows because Docker Desktop is a GUI app.
 
 Ubuntu server:
@@ -192,9 +209,21 @@ Update Sub2API:
 
 ### 小白快速开始
 
-#### macOS / Linux 本地部署
+#### macOS 本地部署
 
-本地电脑需要先安装并打开 Docker Desktop，然后运行：
+macOS 本地电脑需要先安装并打开 Docker Desktop：
+
+[下载 Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+然后运行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | bash -s -- --local
+```
+
+#### Linux 本地部署
+
+先安装并启动 Docker，然后运行：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | bash -s -- --local
@@ -202,7 +231,11 @@ curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.
 
 #### Windows 本地部署
 
-先安装并打开 Docker Desktop，然后运行 PowerShell：
+先安装并打开 Docker Desktop：
+
+[下载 Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+然后运行 PowerShell：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.ps1 -OutFile install.ps1; .\install.ps1"
@@ -243,6 +276,7 @@ Admin password: 自动生成的密码
 本地电脑：
 
 - macOS / Windows 需要 Docker Desktop。只需要安装一次，打开它，然后运行一键部署命令。
+- Docker Desktop 下载地址：[https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - 脚本不会自动安装 macOS / Windows 的 Docker Desktop，因为它是图形界面软件。
 
 Ubuntu 服务器：
