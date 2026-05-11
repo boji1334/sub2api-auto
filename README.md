@@ -41,6 +41,8 @@ powershell -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing https://raw.gi
 
 #### Ubuntu Server
 
+No manual Docker installation is needed. This command installs Docker automatically:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | sudo bash -s -- --server --install-docker
 ```
@@ -69,15 +71,15 @@ Admin password: generated-password
 
 ### Requirements
 
-Local deployment:
+Local computer:
 
-- macOS / Windows: Docker Desktop must be installed and running.
-- Linux desktop: Docker must be installed and running.
+- macOS / Windows needs Docker Desktop. Install it once, open it, then run the one-command installer.
+- The script does not install Docker Desktop on macOS / Windows because Docker Desktop is a GUI app.
 
-Server deployment:
+Ubuntu server:
 
-- Ubuntu is recommended.
-- The installer can install Docker automatically on Linux with `--install-docker`.
+- You do not need to install Docker manually.
+- Use the command with `--install-docker`; the script will install and start Docker automatically.
 - If using server IP access, allow TCP port `8080` in your cloud firewall/security group.
 - If using a domain, point the domain to your server IP and allow TCP ports `80` and `443`.
 
@@ -192,7 +194,7 @@ Update Sub2API:
 
 #### macOS / Linux 本地部署
 
-先安装并打开 Docker Desktop，然后运行：
+本地电脑需要先安装并打开 Docker Desktop，然后运行：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | bash -s -- --local
@@ -207,6 +209,8 @@ powershell -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing https://raw.gi
 ```
 
 #### Ubuntu 服务器部署
+
+不需要手动安装 Docker。下面这条命令会自动安装 Docker 并部署：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/boji1334/sub2api-auto/main/install.sh | sudo bash -s -- --server --install-docker
@@ -236,15 +240,15 @@ Admin password: 自动生成的密码
 
 ### 前提条件
 
-本地部署：
+本地电脑：
 
-- macOS / Windows：必须先安装并打开 Docker Desktop。
-- Linux 桌面：需要 Docker 正在运行。
+- macOS / Windows 需要 Docker Desktop。只需要安装一次，打开它，然后运行一键部署命令。
+- 脚本不会自动安装 macOS / Windows 的 Docker Desktop，因为它是图形界面软件。
 
-服务器部署：
+Ubuntu 服务器：
 
-- 推荐 Ubuntu。
-- 加 `--install-docker` 后，脚本会尝试自动安装 Docker。
+- 不需要你手动安装 Docker。
+- 使用带 `--install-docker` 的命令，脚本会自动安装并启动 Docker。
 - 用服务器 IP 访问时，需要在云服务器安全组/防火墙放行 `8080`。
 - 用域名 HTTPS 时，需要先把域名解析到服务器 IP，并放行 `80` 和 `443`。
 
